@@ -1,8 +1,14 @@
 "use client";
 
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { Button, Skeleton } from "@nextui-org/react";
+import dynamic from "next/dynamic";
 import React, { useEffect, useState } from "react";
+
+const DotLottieReact = dynamic(
+  () =>
+    import("@lottiefiles/dotlottie-react").then((mod) => mod.DotLottieReact),
+  { ssr: false }
+);
 
 export default function HeroSection() {
   const [isLoading, setLoading] = useState(true);

@@ -1,11 +1,17 @@
 "use client";
 
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { Button, Chip, Image, Skeleton } from "@nextui-org/react";
 import { CheckIcon } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import Experiences from "./components/experiences";
 import Projects from "./components/projects";
+import dynamic from "next/dynamic";
+
+const DotLottieReact = dynamic(
+  () =>
+    import("@lottiefiles/dotlottie-react").then((mod) => mod.DotLottieReact),
+  { ssr: false }
+);
 
 export default function AboutMeSection() {
   const specializations = [
