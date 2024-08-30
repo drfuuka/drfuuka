@@ -4,7 +4,6 @@ import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { Button, Chip, Image, Skeleton } from "@nextui-org/react";
 import { CheckIcon } from "lucide-react";
 import React, { useEffect, useState } from "react";
-import BasicTimeline from "./components/timeline";
 import Experiences from "./components/experiences";
 import Projects from "./components/projects";
 
