@@ -13,7 +13,7 @@ export default function Home() {
         <hr className="dark:opacity-10" />
       </div>
 
-      <MyWorksSection />
+      {/* <MyWorksSection /> */}
       <FooterSection />
     </>
   );

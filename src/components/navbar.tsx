@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import ToggleTheme from "./toggle-theme";
 import {
@@ -10,9 +12,50 @@ import {
   NavbarMenuToggle,
 } from "@nextui-org/react";
 import Image from "next/image";
+import { useEffect } from "react";
 
 export default function Navbar() {
-  const menuItems = ["Home", "About", "Portofolio", "Contact"];
+  const menuItems = [
+    {
+      name: "Home",
+      href: "#home",
+    },
+    {
+      name: "About",
+      href: "#about",
+    },
+  ];
+
+  useEffect(() => {
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    // Increase threshold to detect even small overlaps
+    const observerOptions = {
+      root: null, // observe within the viewport
+      rootMargin: "0px", // margin around the root
+      threshold: 0.3, // Adjust threshold to detect visibility earlier
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          navLinks.forEach((link) => {
+            link.classList.toggle(
+              "active",
+              link.getAttribute("data-target") === entry.target.id
+            );
+          });
+        }
+      });
+    }, observerOptions);
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => {
+      sections.forEach((section) => observer.unobserve(section));
+    };
+  }, []);
 
   return (
     <Nav className="shadow-lg">
@@ -34,23 +77,23 @@ export default function Navbar() {
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Link
+            color="foreground"
+            href="#home"
+            data-target="home"
+            className="nav-link"
+          >
             Home
           </Link>
         </NavbarItem>
-        <NavbarItem isActive>
-          <Link href="#" aria-current="page" color="warning">
+        <NavbarItem>
+          <Link
+            href="#about"
+            color="foreground"
+            data-target="about"
+            className="nav-link"
+          >
             About
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link href="#" color="foreground">
-            Portofolio
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link href="#" color="foreground">
-            Contact
           </Link>
         </NavbarItem>
       </NavbarContent>
@@ -73,9 +116,9 @@ export default function Navbar() {
                   ? "danger"
                   : "foreground"
               }
-              href="#"
+              href={item.href}
             >
-              {item}
+              {item.name}
             </Link>
           </NavbarMenuItem>
         ))}

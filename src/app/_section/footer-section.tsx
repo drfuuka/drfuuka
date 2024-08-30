@@ -25,7 +25,7 @@ export default function FooterSection() {
       </span>
 
       <div className="grid grid-cols-12 items-center gap-5 gap-y-20 md:gap-y-5 mt-10">
-        <div className="col-span-12 md:col-span-6">
+        {/* <div className="col-span-12 md:col-span-6">
           <div className="flex flex-col gap-3">
             <span className="font-semibold">How can i help you</span>
             <Select
@@ -43,9 +43,9 @@ export default function FooterSection() {
               </Button>
             </div>
           </div>
-        </div>
+        </div> */}
 
-        <div className="col-span-12 md:col-span-6">
+        <div className="col-span-12 ">
           <span className="font-semibold">Want to know me more?</span>
           <p className="my-6 text-sm font-light">
             Hey! if you like my work, I would love hearing from you. Feel free

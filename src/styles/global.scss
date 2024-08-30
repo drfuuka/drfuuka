@@ -29,12 +29,12 @@ body {
 html[class="dark"] {
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #403d3b;
+    background: #3b535a;
   }
 
   /* Handle */
   ::-webkit-scrollbar-track {
-    background: #1b1917;
+    background: #121f22;
   }
 }
 
@@ -59,4 +59,19 @@ label {
 .no-scrollbar {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+}
+
+.nav-link.active {
+  color: hsl(
+    var(--nextui-primary)
+  ); /* Example: Change the color of the active link */
+  font-weight: bold; /* Or any other styling */
+}
+
+.clamped-text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; /* Number of lines you want to show */
+  line-clamp: 3;
+  overflow: hidden;
 }

@@ -1,56 +1,58 @@
 "use client";
 
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
-import { Button, Chip, Skeleton } from "@nextui-org/react";
+import { Button, Chip, Image, Skeleton } from "@nextui-org/react";
 import { CheckIcon } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import BasicTimeline from "./components/timeline";
-import { TTimeLineProps } from "@/types/timeline.type";
+import Experiences from "./components/experiences";
+import Projects from "./components/projects";
 
 export default function AboutMeSection() {
+  const specializations = [
+    {
+      name: "React",
+      icon: "assets/code-lang-icon/react.svg",
+      experience: "4yrs",
+    },
+    {
+      name: "Vue",
+      icon: "assets/code-lang-icon/vue.svg",
+      experience: "4yrs",
+    },
+    {
+      name: "HTML",
+      icon: "assets/code-lang-icon/html.svg",
+      experience: "4yrs",
+    },
+    {
+      name: "CSS",
+      icon: "assets/code-lang-icon/css.svg",
+      experience: "4yrs",
+    },
+    {
+      name: "Javascript",
+      icon: "assets/code-lang-icon/js.svg",
+      experience: "4yrs",
+    },
+    {
+      name: "Laravel",
+      icon: "assets/code-lang-icon/laravel.svg",
+      experience: "4yrs",
+    },
+    {
+      name: "NodeJS",
+      icon: "assets/code-lang-icon/node.svg",
+      experience: "3yrs",
+    },
+    {
+      name: "SASS",
+      icon: "assets/code-lang-icon/sass.svg",
+      experience: "3yrs",
+    },
+  ];
+
   const [isLoading, setLoading] = useState(true);
-
-  const experiences: TTimeLineProps[] = [
-    {
-      timeText: "2019 (6 Month)",
-      title: "Ginga ID",
-      description:
-        "I’ve worked here as Junior Web Designer and their Graphic Designer.",
-    },
-    {
-      timeText: "2019 (6 Month)",
-      title: "Ginga ID",
-      description:
-        "I’ve worked here as Junior Web Designer and their Graphic Designer.",
-    },
-    {
-      timeText: "2019 (6 Month)",
-      title: "Ginga ID",
-      description:
-        "I’ve worked here as Junior Web Designer and their Graphic Designer.",
-    },
-    {
-      timeText: "2019 (6 Month)",
-      title: "Ginga ID",
-      description:
-        "I’ve worked here as Junior Web Designer and their Graphic Designer.",
-    },
-  ];
-
-  const certificates: TTimeLineProps[] = [
-    {
-      timeText: "2019 (6 Month)",
-      title: "Ginga ID",
-      description:
-        "I’ve worked here as Junior Web Designer and their Graphic Designer.",
-    },
-    {
-      timeText: "2019 (6 Month)",
-      title: "Ginga ID",
-      description:
-        "I’ve worked here as Junior Web Designer and their Graphic Designer.",
-    },
-  ];
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -61,7 +63,10 @@ export default function AboutMeSection() {
   }, []);
 
   return (
-    <div className="px-6 py-10 md:px-32 md:py-16 lg:px-64 lg:py-16 bg-background">
+    <section
+      className="px-6 py-10 md:px-32 md:py-16 lg:px-64 lg:py-16 bg-background"
+      id="about"
+    >
       <h1 className="text-xl font-bold">
         About <span className="text-primary">Me</span>
       </h1>
@@ -69,7 +74,7 @@ export default function AboutMeSection() {
         A Little Things About Me and What I Love To Do
       </span>
 
-      <div className="grid grid-cols-5 gap-10 my-16">
+      <div className="grid grid-cols-5 gap-10 mt-8 mb-16">
         <div className="col-span-2">
           <div className="flex items-center justify-center md:justify-end h-full">
             {isLoading ? (
@@ -130,20 +135,42 @@ export default function AboutMeSection() {
         </div>
       </div>
 
+      <div className="p-3 rounded">
+        <div className="flex items-center gap-3 flex-wrap">
+          {specializations.map((item, index) => (
+            <Chip
+              size="lg"
+              radius="md"
+              color="primary"
+              variant="flat"
+              key={index}
+            >
+              <div className="flex items-center gap-2">
+                <Image src={item.icon} width={20} height={20} alt="" />
+                <div className="flex gap-1">
+                  <span className="text-xs">{item.name}</span>
+                  <span className="opacity-70 text-xs">{item.experience}</span>
+                </div>
+              </div>
+            </Chip>
+          ))}
+        </div>
+      </div>
+
       <div className="grid grid-cols-2 gap-10 mt-16">
         <div className="col-span-1">
           <h1 className="text-xl font-bold mb-5">
             My <span className="text-primary">Experiences</span>
           </h1>
-          <BasicTimeline data={experiences} />
+          <Experiences />
         </div>
         <div className="col-span-1">
           <h1 className="text-xl font-bold mb-5">
-            My <span className="text-primary">Certificates</span>
+            My <span className="text-primary">Works</span>
           </h1>
-          <BasicTimeline data={certificates} />
+          <Projects />
         </div>
       </div>
-    </div>
+    </section>
   );
 }

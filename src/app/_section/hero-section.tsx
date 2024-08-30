@@ -16,7 +16,10 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-5 px-6 py-10 md:px-32 md:py-16 lg:px-64 lg:py-32 min-h-[70vh] gap-10 bg-background-300">
+    <section
+      className="grid grid-cols-1 md:grid-cols-5 px-6 py-10 md:px-32 md:py-16 lg:px-64 lg:py-32 min-h-[70vh] gap-10 bg-background-300"
+      id="home"
+    >
       <div className="md:col-span-3 flex items-center">
         <div className="flex flex-col">
           <span>Hello there,</span>
@@ -46,6 +49,6 @@ export default function HeroSection() {
           )}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
