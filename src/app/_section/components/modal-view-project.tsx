@@ -1,6 +1,5 @@
 import { TGalleriesItem } from "@/types/timeline.type";
 import {
-  Image,
   Modal,
   ModalBody,
   ModalContent,
@@ -8,7 +7,7 @@ import {
   ModalProps,
 } from "@nextui-org/react";
 
-import NextImage from "next/image";
+import Image from "next/image";
 import React from "react";
 
 type Props = Omit<ModalProps, "children"> & {
@@ -39,7 +38,6 @@ export default function ModalViewProject({ modalData, ...props }: Props) {
                     <div className="col-span-8">
                       <div className="rounded-lg overflow-hidden">
                         <Image
-                          as={NextImage}
                           src={modalData.url}
                           alt={""}
                           width={500}
