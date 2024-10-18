@@ -80,7 +80,7 @@ export default function AboutMeSection() {
       </span>
 
       <div className="grid grid-cols-5 gap-10 mt-8 mb-16">
-        <div className="col-span-2">
+        <div className="col-span-5 md:col-span-2">
           <div className="flex items-center justify-center md:justify-end h-full">
             {isLoading ? (
               <Skeleton className="w-full h-[200px] rounded" />
@@ -105,7 +105,7 @@ export default function AboutMeSection() {
             )}
           </div>
         </div>
-        <div className="col-span-3 flex items-center">
+        <div className="col-span-5 md:col-span-3 flex items-center">
           <div className="flex flex-col">
             <h1 className="text-lg font-bold">Hello, I&apos;m Michael</h1>
             <div className="flex flex-col gap-5 mt-4 font-light">
@@ -163,13 +163,13 @@ export default function AboutMeSection() {
       </div>
 
       <div className="grid grid-cols-2 gap-10 mt-16">
-        <div className="col-span-1">
+        <div className="col-span-2 md:col-span-1">
           <h1 className="text-xl font-bold mb-5">
             My <span className="text-primary">Experiences</span>
           </h1>
           <Experiences />
         </div>
-        <div className="col-span-1">
+        <div className="col-span-2 md:col-span-1">
           <h1 className="text-xl font-bold mb-5">
             My <span className="text-primary">Works</span>
           </h1>
