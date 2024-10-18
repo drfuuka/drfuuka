@@ -27,13 +27,13 @@ export default function Projects() {
           title: "Dynamic Approval",
           description:
             "This is for user to manage their approval flow, if certain condition of document meets it will direct the approval based on given condition. On this apps there is some approval flow config that has different from each other, i.e the most complex one is by condition of comparison budget either greater or lower or many more (all comparison condition is included in condition)",
-          url: "https://media.licdn.com/dms/image/v2/D562DAQHssbSAVPJ7XQ/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1724391394563?e=1725609600&v=beta&t=dnIDC2K68j4RhESTizDtrzXaW1CSlDqXB_XnT5J2nL4",
+          url: "/assets/project-galleries/gafi-dynamic-approval.jpeg",
         },
         {
           title: "Dashboard",
           description:
             "This is for user to view all summary from their business, and many call to action so it helps user to decide what to do from given information",
-          url: "https://media.licdn.com/dms/image/v2/D562DAQH-jPuXIfePPA/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1724391053533?e=1725609600&v=beta&t=GSGiSH4OivoukXLkDRo0sso5A865Mblg40ktlCHlvJ8",
+          url: "/assets/project-galleries/gafi-dashboard.jpeg",
         },
       ],
       skill: ["Vue.js", "Laravel", "Tailwind CSS", "RabbitMQ", "pgSQL"],
@@ -49,17 +49,17 @@ export default function Projects() {
         {
           title: "Role Authorization (Dark Theme)",
           description: "",
-          url: "https://media.licdn.com/dms/image/v2/D562DAQFWTXYnJyaq6A/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1724390196895?e=1725609600&v=beta&t=Z0BVP-NdiPsGPhghVeRUSqF7-0riZ3edyPJuEwdjzwM",
+          url: "/assets/project-galleries/beattendance-role-authorization.jpeg",
         },
         {
           title: "Attendance - Tracker (Dark Theme)",
           description: "",
-          url: "https://media.licdn.com/dms/image/v2/D562DAQF-dNaIFlAnPA/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1724390115163?e=1725609600&v=beta&t=Q2_KWUmqle1UQuPk-GET4NxRrWATAUOWZ8t1TjurU9o",
+          url: "/assets/project-galleries/beattendance-attendance-tracker.jpeg",
         },
         {
           title: "Live Attendance - Management",
           description: "",
-          url: "https://media.licdn.com/dms/image/v2/D562DAQGDE6swzcxLDg/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1724389953742?e=1725609600&v=beta&t=rbOoq-rxspgC62z-pyXxssZSlpHAxV5pc73n09h_JDk",
+          url: "/assets/project-galleries/beattendance-live-attendance.jpeg",
         },
       ],
       skill: ["Next.js", "Laravel", "TypeScript", "Google Maps API"],
@@ -74,15 +74,13 @@ export default function Projects() {
       galleries: [
         {
           title: "Central Area",
-          description:
-            "This is for head of department area, this will help user decide what to do from given information. This dashboard including sales tracker, revenue, .etc",
-          url: "https://media.licdn.com/dms/image/v2/D562DAQHW04Ck1cKFfg/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1724392135430?e=1725609600&v=beta&t=MyYInBzz0usyxFWv-ynbVbgZLwnJt-lMOXPfjRo_ts0",
+          description: "This is for head of department area, this will help user decide what to do from given information. This dashboard including sales tracker, revenue, .etc",
+          url: "/assets/project-galleries/bepos-central-area.jpeg",
         },
         {
           title: "Cashier Area",
-          description:
-            "This is for cashier area to order, from this user will be directed to integrated payment and the stock is decreased based on it formula",
-          url: "https://media.licdn.com/dms/image/v2/D562DAQEcIUGTGqYhxQ/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1724392047845?e=1725609600&v=beta&t=QG31IfBMa8I8gWLVUyP_qVHVjMmYp5gUvg0XAkH2nCs",
+          description: "This is for cashier area to order, from this user will be directed to integrated payment and the stock is decreased based on it formula",
+          url: "/assets/project-galleries/bepos-cashier-area.jpeg",
         },
       ],
       skill: ["Vue.js", "Laravel", "Tailwind CSS", "RabbitMQ", "Socket.io"],
@@ -154,17 +152,17 @@ export default function Projects() {
         {
           title: "Multiple SPM Document",
           description: "",
-          url: "https://media.licdn.com/dms/image/v2/D562DAQF0NhiBmGkrxQ/profile-treasury-image-shrink_1920_1920/profile-treasury-image-shrink_1920_1920/0/1724393221054?e=1725609600&v=beta&t=SzAWuYeV_XZCKrHfSlAAFsqWGXFMdYjoHLtJ5WALHgk",
+          url: "/assets/project-galleries/wika-multiple-spm.jpeg",
         },
         {
           title: "SPM Document",
           description: "",
-          url: "https://media.licdn.com/dms/image/v2/D562DAQHo08ehwFZYCw/profile-treasury-image-shrink_1920_1920/profile-treasury-image-shrink_1920_1920/0/1724393208191?e=1725609600&v=beta&t=It0OtNnMasrUwpZ_-mpoJVEz0T8dx83m0mRiCrxeZnY",
+          url: "/assets/project-galleries/wika-spm.jpeg",
         },
         {
           title: "Dashboard Interface",
           description: "",
-          url: "https://media.licdn.com/dms/image/v2/D562DAQGx4lrq2EpvYA/profile-treasury-image-shrink_1920_1920/profile-treasury-image-shrink_1920_1920/0/1724393195223?e=1725609600&v=beta&t=Aizk7Xtuc0sKaUNa1bLloDi31XVK1axPqJOzfE_yf28",
+          url: "/assets/project-galleries/wika-dashboard.jpeg",
         },
       ],
       skill: ["SASS", "JavaScript", "jQuery", "UI/UX"],
