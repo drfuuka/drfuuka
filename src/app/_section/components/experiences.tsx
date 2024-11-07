@@ -13,8 +13,8 @@ import { TExperienceTimeline } from "@/types/timeline.type";
 export default function Experiences() {
   const experiencesData: TExperienceTimeline[] = [
     {
-      companyName: "BIT - Barito Technologies Group",
-      location: "Jakarta, Indonesia",
+      companyName: "BIT - Barito Technologies Group in Prudential",
+      location: "Jakarta Selatan, Indonesia",
       locationType: "Hybrid",
       employmentType: "Fulltime",
       experiences: [
@@ -133,8 +133,9 @@ export default function Experiences() {
               <span className="font-semibold">{item.companyName}</span>
             </div>
             <div className="flex gap-2 items-center">
-              <span className="text-xs">{item.employmentType}</span>•
-              <span className="text-xs font-light">3 yrs 1 mo</span>
+              <span className="text-xs">{item.employmentType}</span>
+              {/* <span className="text-xs">{item.employmentType}</span>•
+              <span className="text-xs font-light">3 yrs 1 mo</span> */}
             </div>
             <div className="flex gap-2 items-center opacity-80">
               <span className="text-xs">{item.location}</span>•
