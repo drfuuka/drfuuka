@@ -97,7 +97,7 @@ export default function AboutMeSection() {
                   </div>
                 </div>
                 <div className="absolute left-1/2 -translate-x-1/2 bottom-5 p-3">
-                  <a href="/files/eng-cv.pdf" download>
+                  <a href="/files/main_cv.pdf" download>
                     <Button variant="bordered" color="primary">
                       Get My CV
                     </Button>
